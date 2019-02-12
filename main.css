@@ -6,4 +6,10 @@ body {
   text-align: center;
   font-size: 50pt;
   display: inline;
+  padding: 5%;
+}
+
+#greeting {
+  color: #7f7a75;
+  font-size: 70pt;
 }
