@@ -3,6 +3,7 @@ let todayDate = document.getElementById("day");
 let greeting = document.getElementById("greeting");
 let day;
 let month;
+let nth;
 
 let showClock = () => {
   let currentTime = new Date();
@@ -12,9 +13,22 @@ let showClock = () => {
   let currentDate = currentTime.getDate();
   let currentMonth = currentTime.getMonth();
   let currentDay = currentTime.getDay();
-  if (currentDay == 2) {
+  let currentYear = currentTime.getFullYear();
+
+  if (currentDay == 1) {
+    day = "Monday";
+  } else if (currentDay == 2) {
     day = "Tuesday";
-  } else {
+  } else if (currentDay == 3) {
+    day = "Wednesday";
+  } else if (currentDay == 4) {
+    day = "Thursday";
+  } else if (currentDay == 5) {
+    day = "Friday";
+  } else if (currentDay == 6) {
+    day = "Saturday";
+  } else if (currentDay == 7) {
+    day = "Sunday";
   }
 
   if (currentMonth == 0) {
@@ -49,8 +63,18 @@ let showClock = () => {
     greeting.textContent = "Good Morning";
   }
 
+  if (currentDay == 1) {
+    nth = "st";
+  } else if (currentDate == 2) {
+    nth = "nd";
+  } else if (currentDate == 3) {
+    nth = "rd";
+  } else if (currentDate >= 4) {
+    nth = "th";
+  }
+
   clock.textContent = `${currentHour} : ${currentMinute} ${currentSecond}`;
-  todayDate.textContent = `${day} ${currentDate} ${month}`;
+  todayDate.textContent = `${day} ${currentDate}${nth} ${month} ${currentYear}`;
   setTimeout(() => {
     showClock();
   }, 10);
