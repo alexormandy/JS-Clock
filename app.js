@@ -57,10 +57,13 @@ let showClock = () => {
     month = "December";
   }
 
-  if (currentHour > 12) {
+  if (currentHour >= 12) {
     greeting.textContent = "Good Afternoon";
-  } else {
+  } else if (currentHour >= 18) {
+    greeting.textContent = "Good Evening";
+  } else if (currentHour >= 1) {
     greeting.textContent = "Good Morning";
+  } else {
   }
 
   if (currentDay == 1) {
