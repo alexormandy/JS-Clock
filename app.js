@@ -57,12 +57,12 @@ let showClock = () => {
     month = "December";
   }
 
-  if (currentHour >= 12) {
-    greeting.textContent = "Good Afternoon";
-  } else if (currentHour >= 18) {
-    greeting.textContent = "Good Evening";
-  } else if (currentHour >= 1) {
+  if (currentHour < 1 - 12) {
     greeting.textContent = "Good Morning";
+  } else if (currentHour > 12 - 17) {
+    greeting.textContent = "Good Afternoon";
+  } else if (currentHour > 17 - 24) {
+    greeting.textContent = "Good Evening";
   } else {
   }
 
@@ -72,8 +72,18 @@ let showClock = () => {
     nth = "nd";
   } else if (currentDate == 3) {
     nth = "rd";
-  } else if (currentDate >= 4) {
+  } else if (currentDate > 4 - 20) {
     nth = "th";
+  } else if (currentDate == 21) {
+    nth = "st";
+  } else if (currentDate == 22) {
+    nth = "nd";
+  } else if (currentDate == 23) {
+    nth = "rd";
+  } else if (currentDate > 24 - 30) {
+    nth = "th";
+  } else {
+    nth = "error";
   }
 
   clock.textContent = `${currentHour} : ${currentMinute} ${currentSecond}`;
