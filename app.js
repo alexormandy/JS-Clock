@@ -35,25 +35,25 @@ let showClock = () => {
     month = "January";
   } else if (currentMonth == 1) {
     month = "February";
-  } else if (currentMonth == 3) {
+  } else if (currentMonth == 2) {
     month = "March";
-  } else if (currentMonth == 4) {
+  } else if (currentMonth == 3) {
     month = "April";
-  } else if (currentMonth == 5) {
+  } else if (currentMonth == 4) {
     month = "May";
-  } else if (currentMonth == 6) {
+  } else if (currentMonth == 5) {
     month = "June";
-  } else if (currentMonth == 7) {
+  } else if (currentMonth == 6) {
     month = "July";
-  } else if (currentMonth == 8) {
+  } else if (currentMonth == 7) {
     month = "August";
-  } else if (currentMonth == 9) {
+  } else if (currentMonth == 8) {
     month = "September";
-  } else if (currentMonth == 10) {
+  } else if (currentMonth == 9) {
     month = "October";
-  } else if (currentMonth == 11) {
+  } else if (currentMonth == 10) {
     month = "November";
-  } else if (currentMonth == 12) {
+  } else if (currentMonth == 11) {
     month = "December";
   }
 
